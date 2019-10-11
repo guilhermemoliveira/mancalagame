@@ -1,4 +1,4 @@
-package com.guilhermemoliveira.app.controller;
+package com.guilhermemoliveira.app.primefaces.controller;
 
 import java.io.Serializable;
 
@@ -13,16 +13,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.guilhermemoliveira.app.exception.BusinessException;
-import com.guilhermemoliveira.app.model.Enum.WhichPlayer;
-import com.guilhermemoliveira.app.model.Game;
-import com.guilhermemoliveira.app.model.Pit;
-import com.guilhermemoliveira.app.model.Player;
-import com.guilhermemoliveira.app.model.Turn;
-import com.guilhermemoliveira.app.service.GameService;
-import com.guilhermemoliveira.app.service.PitService;
-import com.guilhermemoliveira.app.service.PlayerService;
-import com.guilhermemoliveira.app.util.Utilities;
+import com.guilhermemoliveira.app.primefaces.exception.BusinessException;
+import com.guilhermemoliveira.app.primefaces.model.Game;
+import com.guilhermemoliveira.app.primefaces.model.Pit;
+import com.guilhermemoliveira.app.primefaces.model.Player;
+import com.guilhermemoliveira.app.primefaces.model.Turn;
+import com.guilhermemoliveira.app.primefaces.model.Enum.WhichPlayer;
+import com.guilhermemoliveira.app.primefaces.service.GameService;
+import com.guilhermemoliveira.app.primefaces.service.PitService;
+import com.guilhermemoliveira.app.primefaces.service.PlayerService;
+import com.guilhermemoliveira.app.primefaces.util.Utilities;
 
 import lombok.AccessLevel;
 import lombok.Getter;

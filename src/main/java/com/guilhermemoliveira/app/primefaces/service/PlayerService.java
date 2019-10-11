@@ -1,13 +1,13 @@
-package com.guilhermemoliveira.app.service;
+package com.guilhermemoliveira.app.primefaces.service;
 
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 
-import com.guilhermemoliveira.app.exception.BusinessException;
-import com.guilhermemoliveira.app.model.Enum.WhichPlayer;
-import com.guilhermemoliveira.app.model.Pit;
-import com.guilhermemoliveira.app.model.Player;
+import com.guilhermemoliveira.app.primefaces.exception.BusinessException;
+import com.guilhermemoliveira.app.primefaces.model.Pit;
+import com.guilhermemoliveira.app.primefaces.model.Player;
+import com.guilhermemoliveira.app.primefaces.model.Enum.WhichPlayer;
 
 @Service
 public class PlayerService {

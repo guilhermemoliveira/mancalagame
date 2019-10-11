@@ -1,4 +1,4 @@
-package com.guilhermemoliveira.app.model;
+package com.guilhermemoliveira.app.primefaces.model;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.guilhermemoliveira.app.util;
+package com.guilhermemoliveira.app.primefaces.util;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.application.FacesMessage.Severity;

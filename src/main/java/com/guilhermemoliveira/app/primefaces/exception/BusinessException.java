@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.guilhermemoliveira.app.exception;
+package com.guilhermemoliveira.app.primefaces.exception;
 
 public class BusinessException extends Exception {
 

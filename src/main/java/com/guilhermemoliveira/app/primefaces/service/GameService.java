@@ -1,12 +1,12 @@
-package com.guilhermemoliveira.app.service;
+package com.guilhermemoliveira.app.primefaces.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.guilhermemoliveira.app.exception.BusinessException;
-import com.guilhermemoliveira.app.model.Enum.WhichPlayer;
-import com.guilhermemoliveira.app.model.Game;
-import com.guilhermemoliveira.app.model.Player;
+import com.guilhermemoliveira.app.primefaces.exception.BusinessException;
+import com.guilhermemoliveira.app.primefaces.model.Game;
+import com.guilhermemoliveira.app.primefaces.model.Player;
+import com.guilhermemoliveira.app.primefaces.model.Enum.WhichPlayer;
 
 @Service
 public class GameService {
@@ -35,7 +35,7 @@ public class GameService {
 	 * @return
 	 * 	The game ready to be played.
 	 */
-	public Game startGame(Integer quantityOfPits, Integer quantityOfStones, Integer winsP1, Integer winsP2) throws com.guilhermemoliveira.app.exception.BusinessException {
+	public Game startGame(Integer quantityOfPits, Integer quantityOfStones, Integer winsP1, Integer winsP2) throws com.guilhermemoliveira.app.primefaces.exception.BusinessException {
 
 		Game game = new Game();
 

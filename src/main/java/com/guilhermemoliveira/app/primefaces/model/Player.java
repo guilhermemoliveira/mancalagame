@@ -1,9 +1,9 @@
-package com.guilhermemoliveira.app.model;
+package com.guilhermemoliveira.app.primefaces.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.guilhermemoliveira.app.model.Enum.WhichPlayer;
+import com.guilhermemoliveira.app.primefaces.model.Enum.WhichPlayer;
 
 import lombok.Data;
 
