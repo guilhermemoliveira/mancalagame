@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Bol.com Game</title>
+</h:head>
+
+<h:body>
+	<h:form id="bolGameForm">
+		<p:panel header="Bol.com Game" id="bolGamePanel">
+
+			<p:panelGrid style="width: 100%; text-align: center">
+				<p:row>
+					<p:column colspan="7">
+						<p:outputLabel style="font-weight: bold"
+							value="Player 1 - Wins: #{gameBean.game.player1.wins}" />
+					</p:column>
+				</p:row>
+				<p:row id="pitsPlayer1Row">
+					<ui:repeat value="#{gameBean.game.player1.pits}" var="pit1"
+						varStatus="index">
+						<p:column>
+							<p:commandButton update="bolGameForm:bolGamePanel"
+								actionListener="#{gameBean.selectPit(pit1)}"
+								value="Stones: #{pit1.stones.size()}"
+								rendered="#{!pit1.bigPit}"
+								disabled="#{pit1.stones.size() == 0 
+											|| gameBean.nextTurn.whichPlayer == 'PLAYER_TWO'
+											|| gameBean.gameHasEnded}">
+								<f:param id="pitPositionParam" name="pitPositionParam"
+									value="#{index.index}" />
+								<f:param id="playerParam" name="playerParam" value="Player 1" />
+							</p:commandButton>
+							<p:outputLabel style="color: red"
+								value="Big Pit Stones: #{pit1.stones.size()}"
+								rendered="#{pit1.bigPit}" />
+						</p:column>
+					</ui:repeat>
+				</p:row>
+			</p:panelGrid>
+
+			<br />
+
+			<p:panelGrid style="width: 100%; text-align: center">
+				<p:row>
+					<p:column colspan="7">
+						<p:outputLabel style="font-weight: bold"
+							value="Player 2 - Wins: #{gameBean.game.player2.wins}" />
+					</p:column>
+				</p:row>
+				<p:row id="pitsPlayer2Row">
+					<ui:repeat value="#{gameBean.game.player2.pits}" var="pit1"
+						varStatus="index">
+						<p:column>
+							<p:commandButton update="bolGameForm:bolGamePanel"
+								actionListener="#{gameBean.selectPit(pit1)}"
+								value="Stones: #{pit1.stones.size()}"
+								rendered="#{!pit1.bigPit}"
+								disabled="#{pit1.stones.size() == 0 
+											|| gameBean.nextTurn.whichPlayer == 'PLAYER_ONE'
+											|| gameBean.gameHasEnded}">
+								<f:param id="pitPositionParam" name="pitPositionParam"
+									value="#{index.index}" />
+								<f:param id="playerParam" name="playerParam" value="Player 2" />
+							</p:commandButton>
+							<p:outputLabel style="color: red"
+								value="Big Pit Stones: #{pit1.stones.size()}"
+								rendered="#{pit1.bigPit}" />
+						</p:column>
+					</ui:repeat>
+				</p:row>
+			</p:panelGrid>
+			
+			<br />
+			<br />
+			
+			<p:panelGrid style="width: 100%; text-align: center; font-weight: bold;">
+				<p:row>
+					<p:column colspan="7" rowspan="2">
+						<p:outputLabel style="color: green"
+							value="#{gameBean.nextTurn.message}" />
+					</p:column>
+				</p:row>
+			</p:panelGrid>
+
+			<br />
+
+			<p:commandButton update="bolGamePanel" value="Restart"
+				actionListener="#{gameBean.restartGame()}" />
+		</p:panel>
+	</h:form>
+</h:body>
+</html>
