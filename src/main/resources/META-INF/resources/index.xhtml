@@ -11,8 +11,8 @@
 </h:head>
 
 <h:body>
-	<h:form id="bolGameForm">
-		<p:panel header="Bol.com Game" id="bolGamePanel">
+	<h:form id="mancalaGameForm">
+		<p:panel header="Bol.com Game" id="mancalaGamePanel">
 
 			<p:panelGrid style="width: 100%; text-align: center">
 				<p:row>
@@ -25,7 +25,7 @@
 					<ui:repeat value="#{gameBean.game.player1.pits}" var="pit1"
 						varStatus="index">
 						<p:column>
-							<p:commandButton update="bolGameForm:bolGamePanel"
+							<p:commandButton update="mancalaGameForm:mancalaGamePanel"
 								actionListener="#{gameBean.selectPit(pit1)}"
 								value="Stones: #{pit1.stones.size()}"
 								rendered="#{!pit1.bigPit}"
@@ -57,7 +57,7 @@
 					<ui:repeat value="#{gameBean.game.player2.pits}" var="pit1"
 						varStatus="index">
 						<p:column>
-							<p:commandButton update="bolGameForm:bolGamePanel"
+							<p:commandButton update="mancalaGameForm:mancalaGamePanel"
 								actionListener="#{gameBean.selectPit(pit1)}"
 								value="Stones: #{pit1.stones.size()}"
 								rendered="#{!pit1.bigPit}"
@@ -90,7 +90,7 @@
 
 			<br />
 
-			<p:commandButton update="bolGamePanel" value="Restart"
+			<p:commandButton update="mancalaGamePanel" value="Restart"
 				actionListener="#{gameBean.restartGame()}" />
 		</p:panel>
 	</h:form>

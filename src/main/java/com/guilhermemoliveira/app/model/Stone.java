@@ -1,4 +1,4 @@
-package br.com.guilhermedeoliveira.bolgame.model;
+package com.guilhermemoliveira.app.model;
 
 import lombok.Data;
 

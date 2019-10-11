@@ -1,4 +1,4 @@
-package br.com.guilhermedeoliveira.bolgame.util;
+package com.guilhermemoliveira.app.util;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.application.FacesMessage.Severity;

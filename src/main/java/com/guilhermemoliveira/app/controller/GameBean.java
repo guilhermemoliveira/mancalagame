@@ -1,4 +1,4 @@
-package br.com.guilhermedeoliveira.bolgame.controller;
+package com.guilhermemoliveira.app.controller;
 
 import java.io.Serializable;
 
@@ -13,16 +13,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import br.com.guilhermedeoliveira.bolgame.exception.BusinessException;
-import br.com.guilhermedeoliveira.bolgame.model.Enum.WhichPlayer;
-import br.com.guilhermedeoliveira.bolgame.model.Game;
-import br.com.guilhermedeoliveira.bolgame.model.Pit;
-import br.com.guilhermedeoliveira.bolgame.model.Player;
-import br.com.guilhermedeoliveira.bolgame.model.Turn;
-import br.com.guilhermedeoliveira.bolgame.service.GameService;
-import br.com.guilhermedeoliveira.bolgame.service.PitService;
-import br.com.guilhermedeoliveira.bolgame.service.PlayerService;
-import br.com.guilhermedeoliveira.bolgame.util.Utilities;
+import com.guilhermemoliveira.app.exception.BusinessException;
+import com.guilhermemoliveira.app.model.Enum.WhichPlayer;
+import com.guilhermemoliveira.app.model.Game;
+import com.guilhermemoliveira.app.model.Pit;
+import com.guilhermemoliveira.app.model.Player;
+import com.guilhermemoliveira.app.model.Turn;
+import com.guilhermemoliveira.app.service.GameService;
+import com.guilhermemoliveira.app.service.PitService;
+import com.guilhermemoliveira.app.service.PlayerService;
+import com.guilhermemoliveira.app.util.Utilities;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

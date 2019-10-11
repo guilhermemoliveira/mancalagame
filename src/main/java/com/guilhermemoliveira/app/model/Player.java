@@ -1,9 +1,10 @@
-package br.com.guilhermedeoliveira.bolgame.model;
+package com.guilhermemoliveira.app.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.guilhermedeoliveira.bolgame.model.Enum.WhichPlayer;
+import com.guilhermemoliveira.app.model.Enum.WhichPlayer;
+
 import lombok.Data;
 
 @Data

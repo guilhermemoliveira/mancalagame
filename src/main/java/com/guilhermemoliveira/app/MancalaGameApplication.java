@@ -1,11 +1,11 @@
-package br.com.guilhermedeoliveira.bolgame;
+package com.guilhermemoliveira.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class MancalaGameApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(MancalaGameApplication.class, args);
 	}
 }

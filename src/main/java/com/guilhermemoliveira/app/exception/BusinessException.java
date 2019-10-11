@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.com.guilhermedeoliveira.bolgame.exception;
+package com.guilhermemoliveira.app.exception;
 
 public class BusinessException extends Exception {
 

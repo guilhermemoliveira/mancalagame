@@ -1,13 +1,13 @@
-package br.com.guilhermedeoliveira.bolgame.service;
+package com.guilhermemoliveira.app.service;
 
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 
-import br.com.guilhermedeoliveira.bolgame.exception.BusinessException;
-import br.com.guilhermedeoliveira.bolgame.model.Enum.WhichPlayer;
-import br.com.guilhermedeoliveira.bolgame.model.Pit;
-import br.com.guilhermedeoliveira.bolgame.model.Player;
+import com.guilhermemoliveira.app.exception.BusinessException;
+import com.guilhermemoliveira.app.model.Enum.WhichPlayer;
+import com.guilhermemoliveira.app.model.Pit;
+import com.guilhermemoliveira.app.model.Player;
 
 @Service
 public class PlayerService {

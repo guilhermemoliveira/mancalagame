@@ -1,12 +1,12 @@
-package br.com.guilhermedeoliveira.bolgame.service;
+package com.guilhermemoliveira.app.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.guilhermedeoliveira.bolgame.exception.BusinessException;
-import br.com.guilhermedeoliveira.bolgame.model.Enum.WhichPlayer;
-import br.com.guilhermedeoliveira.bolgame.model.Game;
-import br.com.guilhermedeoliveira.bolgame.model.Player;
+import com.guilhermemoliveira.app.exception.BusinessException;
+import com.guilhermemoliveira.app.model.Enum.WhichPlayer;
+import com.guilhermemoliveira.app.model.Game;
+import com.guilhermemoliveira.app.model.Player;
 
 @Service
 public class GameService {
@@ -35,7 +35,7 @@ public class GameService {
 	 * @return
 	 * 	The game ready to be played.
 	 */
-	public Game startGame(Integer quantityOfPits, Integer quantityOfStones, Integer winsP1, Integer winsP2) throws BusinessException {
+	public Game startGame(Integer quantityOfPits, Integer quantityOfStones, Integer winsP1, Integer winsP2) throws com.guilhermemoliveira.app.exception.BusinessException {
 
 		Game game = new Game();
 
