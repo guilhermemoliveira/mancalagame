@@ -1,7 +1,9 @@
 package com.guilhermemoliveira.app.angular.model.dtos;
 
 import java.io.Serializable;
-import java.util.Objects;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -21,8 +23,8 @@ public class PitDTO implements Serializable {
 	
 	private Integer stones;
 	
-	public PitDTO(Integer stones) {
-		this.stones = Objects.requireNonNull(stones);
+	public PitDTO(@NotNull @Min(0) Integer stones) {
+		this.stones = stones;
 	}
 
 }

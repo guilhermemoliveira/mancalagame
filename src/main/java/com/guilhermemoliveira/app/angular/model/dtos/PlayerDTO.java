@@ -2,7 +2,9 @@ package com.guilhermemoliveira.app.angular.model.dtos;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.Objects;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -22,8 +24,12 @@ public class PlayerDTO implements Serializable {
 	
 	private List<PitDTO> pits;
 	
-	public PlayerDTO(List<PitDTO> pits) {
-		this.pits = Objects.requireNonNull(pits);
+	public PlayerDTO(@NotNull @NotEmpty List<PitDTO> pits) {
+		this.pits = pits;
 	}
+
+//	public PlayerDTO(Player player) {
+//		
+//	}
 
 }

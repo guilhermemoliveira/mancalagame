@@ -3,9 +3,8 @@ package com.guilhermemoliveira.app.angular.model.dtos;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-
-import com.guilhermemoliveira.app.angular.model.entities.Game;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -23,11 +22,14 @@ public class GameDTO implements Serializable {
 	@Setter(value = AccessLevel.NONE)
 	private static final long serialVersionUID = 1L;
 	
-	@NotNull
 	private List<PlayerDTO> players;
 	
-	public GameDTO(Game game) {
-		//this.players = new PlayerDTO(game.getPlayers()); 
+//	public GameDTO(@NotNull @NotEmpty Game game) {
+//		this.players = game.getPlayers().stream().map(player -> new PlayerDTO(player)).collect(Collectors.toList());
+//	}
+	
+	public GameDTO(@NotNull @NotEmpty List<PlayerDTO> players) {
+		this.players = players;
 	}
 
 }

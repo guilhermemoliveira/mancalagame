@@ -22,8 +22,8 @@ public class Player implements Serializable {
 	
 	private List<Pit> pits;
 	
-	public Player(List<Pit> pits) {
-		this.pits = Objects.requireNonNull(pits);
+	public Player(List<Pit> list) {
+		this.pits = Objects.requireNonNull(list);
 	}
 
 }
