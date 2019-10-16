@@ -3,6 +3,7 @@ package com.guilhermemoliveira.app.angular.model.dtos;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -24,12 +25,8 @@ public class PlayerDTO implements Serializable {
 	
 	private List<PitDTO> pits;
 	
-	public PlayerDTO(@NotNull @NotEmpty List<PitDTO> pits) {
+	public PlayerDTO(@NotNull @NotEmpty @Min(0) List<PitDTO> pits) {
 		this.pits = pits;
 	}
-
-//	public PlayerDTO(Player player) {
-//		
-//	}
 
 }

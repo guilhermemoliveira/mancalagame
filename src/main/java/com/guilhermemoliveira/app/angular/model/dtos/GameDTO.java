@@ -3,6 +3,7 @@ package com.guilhermemoliveira.app.angular.model.dtos;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -24,11 +25,7 @@ public class GameDTO implements Serializable {
 	
 	private List<PlayerDTO> players;
 	
-//	public GameDTO(@NotNull @NotEmpty Game game) {
-//		this.players = game.getPlayers().stream().map(player -> new PlayerDTO(player)).collect(Collectors.toList());
-//	}
-	
-	public GameDTO(@NotNull @NotEmpty List<PlayerDTO> players) {
+	public GameDTO(@NotNull @NotEmpty @Min(0) List<PlayerDTO> players) {
 		this.players = players;
 	}
 
